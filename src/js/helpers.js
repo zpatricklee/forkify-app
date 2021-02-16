@@ -44,7 +44,6 @@ export const AJAX_spoonacular = async function (url) {
     const res = await Promise.race([fetchPromise, timeout(TIMEOUT_SEC)]);
     const data = await res.json();
 
-    // console.log(data);
     return data;
   } catch (err) {
     throw err;
